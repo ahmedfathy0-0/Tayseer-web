@@ -18,8 +18,10 @@ const Navigation = ({
   handleSubmenu,
 }: NavigationProps) => {
   const pathUrl = usePathname();
-  const shouldUseDarkText = pathUrl !== "/" || sticky;
-
+  const isHome = pathUrl === "/";
+  const isMobile = navbarOpen; // You may refine this if you have a better mobile detection
+  const shouldUseWhiteText = isHome && !sticky && !isMobile; // Home, sticky, not mobile
+  const shouldUseDarkTextMobile = isHome && !sticky && isMobile; // Home, sticky, mobile
   return (
     <nav
       id="navbarCollapse"
@@ -37,15 +39,23 @@ const Navigation = ({
                 onClick={navbarToggleHandler}
                 scroll={false}
                 href={menuItem.path}
-                className={`ud-menu-scroll flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
-                  shouldUseDarkText
-                    ? "text-forest-700 group-hover:text-primary-500 dark:text-primary-50 dark:group-hover:text-teal-400"
-                    : "text-primary-50 dark:text-primary-50 lg:text-white hover:text-teal-300"
-                } ${
-                  pathUrl === menuItem?.path &&
-                  shouldUseDarkText &&
-                  "!text-primary-500 dark:!text-teal-400"
-                }`}
+                className={`ud-menu-scroll flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6
+            ${
+              isHome
+                ? shouldUseWhiteText
+                  ? "text-white dark:text-white"
+                  : shouldUseDarkTextMobile
+                  ? "text-forest-700 dark:text-primary-50"
+                  : sticky
+                  ? "text-forest-700 dark:text-primary-50"
+                  : "text-primary-50 dark:text-primary-50 lg:text-white hover:text-teal-300"
+                : // other pages
+                  "text-forest-700 group-hover:text-primary-500 dark:text-primary-50 dark:group-hover:text-teal-400"
+            }
+            ${
+              pathUrl === menuItem?.path &&
+              "!text-primary-500 dark:!text-teal-400"
+            }`}
               >
                 {menuItem.title}
               </Link>
@@ -54,11 +64,18 @@ const Navigation = ({
             <li className="submenu-item group relative" key={index}>
               <button
                 onClick={() => handleSubmenu(index)}
-                className={`ud-menu-scroll flex items-center justify-between py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
-                  shouldUseDarkText
-                    ? "text-forest-700 group-hover:text-primary-500 dark:text-primary-50 dark:group-hover:text-teal-400"
-                    : "text-white"
-                }`}
+                className={`ud-menu-scroll flex items-center justify-between py-2 text-base lg:inline-flex lg:px-0 lg:py-6
+            ${
+              isHome
+                ? shouldUseWhiteText
+                  ? "text-white dark:text-white"
+                  : shouldUseDarkTextMobile
+                  ? "text-forest-700 dark:text-primary-50"
+                  : sticky
+                  ? "text-forest-700 dark:text-primary-50"
+                  : "text-white"
+                : "text-forest-700 group-hover:text-primary-500 dark:text-primary-50 dark:group-hover:text-teal-400"
+            }`}
               >
                 {menuItem.title}
                 <span className="pl-1">
@@ -77,7 +94,6 @@ const Navigation = ({
                   </svg>
                 </span>
               </button>
-              
 
               <div
                 className={`submenu relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-background-dark-secondary lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
@@ -89,11 +105,16 @@ const Navigation = ({
                     href={submenuItem.path || "#"}
                     key={i}
                     onClick={navbarToggleHandler}
-                    className={`block rounded px-4 py-[10px] text-sm ${
-                      pathUrl === submenuItem.path
-                        ? "text-primary-500 dark:text-teal-400"
-                        : "text-dark-600 hover:text-primary-500 dark:text-primary-200 dark:hover:text-teal-400"
-                    }`}
+                    className={`block rounded px-4 py-[10px] text-sm
+                ${
+                  isHome
+                    ? shouldUseWhiteText
+                      ? "text-forest-700 dark:text-primary-50"
+                      : "text-dark-600 hover:text-primary-500 dark:text-primary-200 dark:hover:text-teal-400"
+                    : pathUrl === submenuItem.path
+                    ? "text-primary-500 dark:text-teal-400"
+                    : "text-dark-600 hover:text-primary-500 dark:text-primary-200 dark:hover:text-teal-400"
+                }`}
                   >
                     {submenuItem.title}
                   </Link>
