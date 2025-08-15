@@ -19,7 +19,7 @@ const AboutContent = () => {
         </p>
 
         <Link
-          href="/about"
+          href="/about.pdf"
           className="inline-flex items-center justify-center rounded-md bg-primary-500 hover:bg-primary-600 dark:bg-teal-500 dark:hover:bg-teal-600 px-7 py-3 text-center text-base font-medium text-white duration-300 transition-colors"
         >
           Learn More About Us

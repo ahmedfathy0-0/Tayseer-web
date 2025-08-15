@@ -50,6 +50,20 @@ const ContactForm = () => {
             className="w-full border-0 border-b border-gray-200 bg-transparent pb-3 text-forest-700 placeholder:text-dark-400 focus:border-primary-500 focus:outline-none dark:border-dark-600 dark:text-primary-50 dark:placeholder:text-primary-300 dark:focus:border-primary-400"
           />
         </div>
+        <div className="mb-[22px]">
+          <label
+            htmlFor="company"
+            className="mb-4 block text-sm text-dark-600 dark:text-primary-200"
+          >
+            Company*
+          </label>
+          <input
+            type="text"
+            name="company"
+            placeholder="Tayseer International Chemicals"
+            className="w-full border-0 border-b border-gray-200 bg-transparent pb-3 text-forest-700 placeholder:text-dark-400 focus:border-primary-500 focus:outline-none dark:border-dark-600 dark:text-primary-50 dark:placeholder:text-primary-300 dark:focus:border-primary-400"
+          />
+        </div>
         <div className="mb-[30px]">
           <label
             htmlFor="message"

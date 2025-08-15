@@ -27,7 +27,7 @@ const ContactInfo = () => {
               Our Location
             </h3>
             <p className="text-base text-dark-600 dark:text-primary-200">
-              Egypt, Cairo, Nasr City, Abbas El Akkad Street
+              2 Ali Amin, Nasr City – Cairo, Egypt
             </p>
           </div>
         </div>
@@ -47,10 +47,7 @@ const ContactInfo = () => {
               How Can We Help?
             </h3>
             <p className="text-base text-dark-600 dark:text-primary-200">
-              info@tayseerchemicals.com
-            </p>
-            <p className="mt-1 text-base text-dark-600 dark:text-primary-200">
-              contact@tayseerchemicals.com
+              websales@tayseerintl.com
             </p>
           </div>
         </div>

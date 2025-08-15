@@ -6,7 +6,7 @@ const SocialLinks = () => {
       {/* Facebook */}
       <Link
         aria-label="Facebook"
-        href="https://facebook.com/tayseerinternationalchemicals"
+        href="https://web.facebook.com/people/Tayseer-International-Chemicals/61559321727446/"
         target="_blank"
         rel="noopener noreferrer"
         className="px-3 text-dark-700 hover:text-primary-500 dark:text-primary-200 dark:hover:text-teal-300 transition-colors duration-300"
@@ -46,7 +46,7 @@ const SocialLinks = () => {
       {/* WhatsApp */}
       <Link
         aria-label="WhatsApp"
-        href="https://wa.me/+201234567890"
+        href="https://wa.me/message/YWOKGTSVIH4LJ1"
         target="_blank"
         rel="noopener noreferrer"
         className="px-3 text-dark-700 hover:text-primary-500 dark:text-primary-200 dark:hover:text-teal-300 transition-colors duration-300"
@@ -66,7 +66,7 @@ const SocialLinks = () => {
       {/* Email */}
       <Link
         aria-label="Email"
-        href="mailto:info@tayseerinternational.com"
+        href="mailto:websales@tayseerintl.com"
         className="px-3 text-dark-700 hover:text-primary-500 dark:text-primary-200 dark:hover:text-teal-300 transition-colors duration-300"
       >
         <svg
