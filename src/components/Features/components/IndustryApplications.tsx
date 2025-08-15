@@ -1,5 +1,5 @@
 import IndustryApplication from "./IndustryApplication";
-
+import SectionTitle from "../../Common/SectionTitle";
 
 const industryApplicationsData = [
   {
@@ -57,31 +57,36 @@ const industryApplicationsData = [
     id: 9,
     icon: "/images/features/refractories.svg",
     title: "Refractories",
-    description: "High-temperature resistant chemicals for refractory applications",
+    description:
+      "High-temperature resistant chemicals for refractory applications",
   },
 ];
 
 const IndustryApplications = () => {
   return (
-    <div>
-      <div className="mb-12 text-center">
-        <h3 className="mb-4 text-3xl font-bold leading-snug text-forest-700 dark:text-primary-50 sm:text-4xl sm:leading-snug">
-          Industry Applications
-        </h3>
-        <p className="text-base text-dark-600 dark:text-primary-200">
-          The company&apos;s products can be used in various industries,
-          including:
-        </p>
+    <div className="py-8 px-2">
+      <div className="mb-12">
+        <SectionTitle
+          subtitle="Industry Applications"
+          title="Industry Applications"
+          paragraph="The company's products can be used in various industries, including:"
+          width="640px"
+          center
+        />
       </div>
 
-      <div className="-mx-4 flex flex-wrap">
-        {industryApplicationsData.map((application) => (
-          <IndustryApplication key={application.id} application={application} />
-        ))}
+      <div className="max-w-6xl mx-auto">
+        <div className="-mx-4 flex flex-wrap justify-center ">
+          {industryApplicationsData.map((application) => (
+            <IndustryApplication
+              key={application.id}
+              application={application}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 export default IndustryApplications;
-     

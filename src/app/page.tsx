@@ -11,12 +11,12 @@ import Features from "@/components/Features";
 import Team from "@/components/Team";
 // import Testimonials from "@/components/Testimonials";
 // import { getAllPosts } from "@/utils/markdown";
+import Cirtificates from "@/components/Cirtificates";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Tayseer International Chemicals - TSC",
-  description:
-    "",
+  description: "",
 };
 
 export default function Home() {
@@ -29,6 +29,7 @@ export default function Home() {
       <About />
       <Features />
       <Team />
+      <Cirtificates />
       {/* <Features />
       <About />
       <CallToAction />

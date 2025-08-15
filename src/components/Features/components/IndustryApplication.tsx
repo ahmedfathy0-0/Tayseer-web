@@ -11,8 +11,8 @@ interface IndustryApplicationProps {
 
 const IndustryApplication = ({ application }: IndustryApplicationProps) => {
   return (
-    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-      <div className="group relative mb-12 rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-dark-800 dark:shadow-gray-700 dark:hover:shadow-primary-500/10">
+    <div className="w-full px-4 md:w-1/2 lg:w-1/3 ">
+      <div className="group relative mb-12 rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-dark-900 dark:shadow-gray-700 dark:hover:shadow-primary-500/10 h-[250px] flex flex-col">
         <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-primary-500 to-teal-500">
           {typeof application.icon === "string" ? (
             <Image
@@ -31,7 +31,7 @@ const IndustryApplication = ({ application }: IndustryApplicationProps) => {
           {application.title}
         </h4>
 
-        <p className="text-dark-600 dark:text-primary-200">
+        <p className="text-dark-600 dark:text-primary-200 flex-1 line-clamp-4">
           {application.description}
         </p>
 
