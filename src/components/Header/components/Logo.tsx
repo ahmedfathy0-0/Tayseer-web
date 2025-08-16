@@ -27,14 +27,14 @@ const Logo = ({ sticky }: LogoProps) => {
           alt="logo"
           width={isHomePage && !sticky ? 70 : 90}
           height={50}
-          className="header-logo dark:hidden"
+          className="header-logo dark:hidden max-[420px]:w-20 max-[420px]:h-20"
         />
         <Image
           src="/images/logo/logo.png"
           alt="logo"
           width={isHomePage && !sticky ? 70 : 90}
           height={50}
-          className="header-logo hidden dark:block"
+          className="header-logo hidden dark:block max-[420px]:w-20 max-[420px]:h-20"
         />
 
         <div className="ml-3 flex flex-col">
@@ -43,7 +43,7 @@ const Logo = ({ sticky }: LogoProps) => {
               shouldUseDarkText
                 ? "text-forest-700 dark:text-primary-50"
                 : "text-white"
-            }`}
+            } max-[420px]:text-sm`}
           >
             Tayseer International Chemicals
           </h1>
@@ -52,7 +52,7 @@ const Logo = ({ sticky }: LogoProps) => {
               shouldUseDarkText
                 ? "text-primary-500 dark:text-teal-400"
                 : "text-teal-300"
-            }`}
+            } max-[420px]:text-[10px]`}
           >
             TSC
           </span>
