@@ -14,12 +14,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  type Items = {
-    // [key: string]: string;
-    [key: string]: string | object;
-  };
-
-  const items: any = {};
+  const items: Record<string, string | object> = {};
 
   function processImages(content: string) {
     // You can modify this function to handle image processing
@@ -80,6 +75,11 @@ export function getAllTags() {
     const post = getPostBySlug(slug, ["tags"]);
     if (post.tags) {
       post.tags.forEach((tag) => allTags.add(tag));
+    }
+  });
+
+  return Array.from(allTags);
+}
     }
   });
 
