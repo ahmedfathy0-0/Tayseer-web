@@ -9,7 +9,7 @@ const HomeBlogSection = ({ posts }: any) => {
           <SectionTitle
             subtitle="Our Blogs"
             title="Our Recent News"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            paragraph="Explore our insightful articles showcasing innovative and cost-effective chemical solutions tailored for diverse industries, with a strong focus on their crucial applications in water and wastewater treatment, sustainable agriculture, and various other sectors."
             width="640px"
             center
           />
