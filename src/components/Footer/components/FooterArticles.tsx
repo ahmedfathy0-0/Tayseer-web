@@ -1,43 +1,43 @@
 import Link from "next/link";
 
-const FooterFeatures = () => {
+const FooterArticles = () => {
   return (
-    <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
+    <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
       <div className="mb-10 w-full">
         <h4 className="mb-9 text-lg font-semibold text-forest-700 dark:text-primary-50">
-          Features
+          Articles
         </h4>
         <ul>
           <li>
             <Link
-              href="#"
+              href="/articles/polyacrylamide-pam-product"
               className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
             >
-              How it works
+              Polyacrylamide
             </Link>
           </li>
           <li>
             <Link
-              href="#"
+              href="/articles/iron-ore-yellow-iron-oxide-product"
               className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
             >
-              Privacy policy
+              Iron Ore
             </Link>
           </li>
           <li>
             <Link
-              href="#"
+              href="/articles/co-polymer-coagulant-product"
               className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
             >
-              Terms of Service
+              Co-Polymer
             </Link>
           </li>
           <li>
             <Link
-              href="#"
+              href="/articles/pac-18-polyaluminium-chloride-product"
               className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
             >
-              Refund policy
+              PAC 18
             </Link>
           </li>
         </ul>
@@ -46,4 +46,4 @@ const FooterFeatures = () => {
   );
 };
 
-export default FooterFeatures;
+export default FooterArticles;

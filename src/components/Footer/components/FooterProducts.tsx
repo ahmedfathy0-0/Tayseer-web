@@ -10,34 +10,26 @@ const FooterProducts = () => {
         <ul>
           <li>
             <Link
-              href="#"
+              href="/products/water-treatment-chemicals"
               className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
             >
-              LineIcons
+              Water Treatment Chemicals
             </Link>
           </li>
           <li>
             <Link
-              href="#"
+              href="/products/fertilizers"
               className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
             >
-              Next.js Templates
+              Fertilizers
             </Link>
           </li>
           <li>
             <Link
-              href="#"
+              href="/products/commodities"
               className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
             >
-              TailAdmin
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-            >
-              PlainAdmin
+              Commodities
             </Link>
           </li>
         </ul>

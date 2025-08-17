@@ -1,6 +1,6 @@
 import FooterBrand from "./components/FooterBrand";
-import FooterAbout from "./components/FooterAbout";
-import FooterFeatures from "./components/FooterFeatures";
+import FooterArticles from "./components/FooterArticles";
+import FooterQuickLinks from "./components/FooterQuickLinks";
 import FooterProducts from "./components/FooterProducts";
 import FooterContact from "./components/FooterContact";
 import FooterBottom from "./components/FooterBottom";
@@ -15,8 +15,8 @@ const Footer = () => {
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <FooterBrand />
-          <FooterAbout />
-          <FooterFeatures />
+          <FooterArticles />
+          <FooterQuickLinks />
           <FooterProducts />
           <FooterContact />
         </div>
