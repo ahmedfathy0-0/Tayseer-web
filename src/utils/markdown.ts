@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
+import { Blog } from "../types/blog";
 
 const postsDirectory = join(process.cwd(), "markdown/articles");
 
@@ -8,13 +9,16 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
+export function getPostBySlug(
+  slug: string,
+  fields: string[] = []
+): Partial<Blog> & Record<string, unknown> {
   const realSlug = slug.replace(/\.mdx$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  const items: Record<string, string | object> = {};
+  const items: Record<string, string | string[] | object | null> = {};
 
   function processImages(content: string) {
     // You can modify this function to handle image processing
@@ -50,8 +54,10 @@ export function getAllPosts(fields: string[] = []) {
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-
+    .sort((post1, post2) => {
+      if (!post1.date || !post2.date) return 0;
+      return post1.date > post2.date ? -1 : 1;
+    });
   return posts;
 }
 
@@ -61,9 +67,12 @@ export function getPostsByTags(tags: string[], fields: string[] = []) {
     .map((slug) => getPostBySlug(slug, [...fields, "tags"]))
     .filter((post) => {
       if (!post.tags) return false;
-      return tags.some((tag) => post.tags.includes(tag));
+      return tags.some((tag) => post.tags!.includes(tag));
     })
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    .sort((post1, post2) => {
+      if (!post1.date || !post2.date) return 0;
+      return post1.date > post2.date ? -1 : 1;
+    });
   return posts;
 }
 

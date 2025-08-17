@@ -2,6 +2,7 @@ import SingleArticle from "@/components/Article/SingleArticle";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
+import { Blog } from "@/types/blog";
 
 export const metadata: Metadata = {
   title: "Articles & Insights | Tayseer International Chemicals",
@@ -44,7 +45,7 @@ const Articles = () => {
                 key={i}
                 className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3 mb-8"
               >
-                <SingleArticle blog={article} />
+                <SingleArticle blog={article as Blog} />
               </div>
             ))}
           </div>
