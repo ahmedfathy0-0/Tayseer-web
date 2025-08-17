@@ -22,7 +22,6 @@ export async function generateMetadata({ params }: Props) {
     "author",
   ]);
 
-  const siteName = "Tayseer International Chemicals";
   const authorName = post.author || "Tayseer Team";
 
   if (post) {

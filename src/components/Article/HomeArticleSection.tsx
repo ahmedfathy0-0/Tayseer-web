@@ -1,7 +1,12 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleArticle";
+import { Blog } from "@/types/blog";
 
-const HomeBlogSection = ({ posts }: any) => {
+interface HomeBlogSectionProps {
+  posts: Blog[];
+}
+
+const HomeBlogSection = ({ posts }: HomeBlogSectionProps) => {
   return (
     <section className="pb-10 pt-20 bg-background-light-secondary dark:bg-dark-800 lg:pb-20 lg:pt-[120px]">
       <div className="container mx-auto">
@@ -16,7 +21,7 @@ const HomeBlogSection = ({ posts }: any) => {
         </div>
 
         <div className="-mx-4 flex flex-wrap">
-          {posts.slice(0, 3).map((blog: any, i: number) => (
+          {posts.slice(0, 3).map((blog: Blog, i: number) => (
             <div key={i} className="w-full px-4 md:w-1/2 lg:w-1/3">
               <SingleBlog blog={blog} />
             </div>
