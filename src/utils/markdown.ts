@@ -80,8 +80,3 @@ export function getAllTags() {
 
   return Array.from(allTags);
 }
-    }
-  });
-
-  return Array.from(allTags);
-}
