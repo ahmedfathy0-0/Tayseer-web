@@ -2,6 +2,7 @@ import SingleArticle from "@/components/Article/SingleArticle";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { getPostsByTags } from "@/utils/markdown";
 import Image from "next/image";
+import { Blog } from "@/types/blog";
 
 interface ProductFeature {
   title: string;
@@ -115,7 +116,7 @@ const ProductPage = ({
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {relatedArticles.slice(0, 6).map((article, i) => (
                   <div key={i} className="h-full">
-                    <SingleArticle blog={article} />
+                    <SingleArticle blog={article as Blog} />
                   </div>
                 ))}
               </div>
