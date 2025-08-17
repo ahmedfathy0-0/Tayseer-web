@@ -8,6 +8,7 @@ import Cirtificates from "@/components/Cirtificates";
 import HomeArticleSection from "@/components/Article/HomeArticleSection";
 
 import { getAllPosts } from "@/utils/markdown";
+import { Blog } from "@/types/blog";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -60,7 +61,7 @@ export default function Home() {
       <About />
       <Features />
       <Team />
-      <HomeArticleSection posts={posts} />
+      <HomeArticleSection posts={posts as Blog[]} />
       <Cirtificates />
       <Contact />
       {/* <Features />
