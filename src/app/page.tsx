@@ -5,6 +5,9 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Team from "@/components/Team";
 import Cirtificates from "@/components/Cirtificates";
+import HomeArticleSection from "@/components/Article/HomeArticleSection";
+
+import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -48,7 +51,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  // const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
+  const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
 
   return (
     <main>
@@ -57,6 +60,7 @@ export default function Home() {
       <About />
       <Features />
       <Team />
+      <HomeArticleSection posts={posts} />
       <Cirtificates />
       <Contact />
       {/* <Features />
@@ -66,7 +70,6 @@ export default function Home() {
       <Testimonials />
       <Faq />
       <Team />
-      <HomeBlogSection posts={posts} />
       <Clients /> */}
     </main>
   );

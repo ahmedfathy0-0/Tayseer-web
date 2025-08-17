@@ -10,7 +10,7 @@ const certificateImages = [
 ];
 
 const CertificatesSection = () => (
-  <section className="pt-8 px-2 bg-background-light-secondary dark:bg-dark-800">
+  <section className="pt-8 px-2 pb-8 bg-white  dark:bg-dark-900">
     <div className="mb-6">
       <SectionTitle
         subtitle="Certification & Approvals"
