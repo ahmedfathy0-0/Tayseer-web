@@ -2,11 +2,24 @@ import SingleArticle from "@/components/Article/SingleArticle";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { getPostsByTags } from "@/utils/markdown";
 import Image from "next/image";
+import Link from "next/link";
 import { Blog } from "@/types/blog";
+import { Product } from "@/types/product";
+import ProductCard from "./ProductCard";
 
 interface ProductFeature {
   title: string;
   description: string;
+}
+
+interface ProductData {
+  title: string;
+  description: string;
+  image: string;
+  certifications?: string[];
+  features?: string[];
+  applications?: string[];
+  slug?: string;
 }
 
 interface ProductPageProps {
@@ -18,6 +31,7 @@ interface ProductPageProps {
   badges: string[];
   tags: string[];
   featuresTitle?: string;
+  Products?: ProductData[];
 }
 
 const ProductPage = ({
@@ -25,10 +39,11 @@ const ProductPage = ({
   description,
   image,
   imageAlt,
-  features = [],
+  features,
   badges,
   tags,
-  featuresTitle = "Our Solutions",
+  featuresTitle,
+  Products = []
 }: ProductPageProps) => {
   const relatedArticles = getPostsByTags(tags, [
     "title",
@@ -84,13 +99,13 @@ const ProductPage = ({
           </div>
 
           {/* Product Features */}
-          {features.length > 0 && (
+          {(features?.length ?? 0) > 0 && (
             <div className="wow fadeInUp mb-12 lg:mb-16" data-wow-delay=".2s">
               <h2 className="mb-6 text-center text-xl font-bold text-dark dark:text-white sm:text-2xl md:text-3xl lg:text-left">
                 {featuresTitle}
               </h2>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {features.map((feature, index) => (
+                {features?.map((feature, index) => (
                   <div
                     key={index}
                     className="rounded-lg border border-gray-200 p-4 transition-shadow hover:shadow-lg dark:border-gray-700 dark:bg-gray-800 sm:p-6"
@@ -105,6 +120,38 @@ const ProductPage = ({
                 ))}
               </div>
             </div>
+          )}
+          
+          {/* Products Section */}
+          {Products && Products.length > 0 && (
+            <section className="py-16 md:py-20 lg:py-28">
+              <div className="container">
+                <div className="mx-auto mb-12 max-w-4xl text-center">
+                  <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-5xl">
+                    Our Products
+                  </h2>
+                  <p className="text-lg text-body-color dark:text-body-color-dark">
+                    Discover our comprehensive range of high-quality products
+                    designed to meet your specific needs.
+                  </p>
+                </div>
+
+                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                  {Products.map((product: ProductData, index: number) => (
+                    <ProductCard
+                      key={index}
+                      title={product.title}
+                      description={product.description}
+                      image={product.image}
+                      certifications={product.certifications}
+                      features={product.features}
+                      applications={product.applications}
+                      slug={product.slug}
+                    />
+                  ))}
+                </div>
+              </div>
+            </section>
           )}
 
           {/* Related Articles */}

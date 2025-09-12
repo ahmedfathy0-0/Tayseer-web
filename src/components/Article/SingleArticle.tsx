@@ -40,7 +40,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
             {excerpt}
           </p>
           {tags && tags.length > 0 && (
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-4">
               {tags.map((tag, index) => (
                 <span
                   key={index}
@@ -50,7 +50,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
                 </span>
               ))}
             </div>
-          )}
+          )}         
         </div>
       </div>
     </div>

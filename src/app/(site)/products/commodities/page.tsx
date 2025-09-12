@@ -26,6 +26,67 @@ const Commodities = () => {
     },
   ];
 
+  const products = [
+    {
+      title: "Sulfuric Acid",
+      description:
+        "Technical and battery grade sulfuric acid for industrial applications",
+      image: "/images/products/sulfuric-acid.jpg",
+      applications: [
+        "Battery manufacturing",
+        "Metal processing",
+        "Chemical synthesis",
+      ],
+      certifications: ["ISO Standards", "Industrial Grade"],
+    },
+    {
+      title: "Hydrochloric Acid",
+      description:
+        "High-purity hydrochloric acid for various industrial processes",
+      image: "/images/products/hydrochloric-acid.jpg",
+      applications: ["Metal pickling", "pH control", "Chemical processing"],
+      certifications: ["Industrial Grade", "Technical Grade"],
+    },
+    {
+      title: "Caustic Soda",
+      description: "Sodium hydroxide solutions and flakes for industrial use",
+      image: "/images/products/caustic-soda.jpg",
+      applications: [
+        "Soap manufacturing",
+        "Textile processing",
+        "Chemical production",
+      ],
+      certifications: ["Industrial Grade", "Food Grade"],
+    },
+    {
+      title: "Citric Acid",
+      description: "Food and industrial grade citric acid",
+      image: "/images/products/citric-acid.jpg",
+      applications: ["Food & beverage", "Cleaning products", "Pharmaceutical"],
+      certifications: ["Food Grade", "USP", "BP"],
+      slug: "citric-acid",
+    },
+    {
+      title: "Sodium Bisulfite",
+      description:
+        "Technical grade sodium bisulfite for industrial applications",
+      image: "/images/products/sodium-bisulfite.jpg",
+      applications: [
+        "Water treatment",
+        "Food preservation",
+        "Textile processing",
+      ],
+      certifications: ["Food Grade", "Technical Grade"],
+    },
+    {
+      title: "Sodium Metabisulfite",
+      description: "High-purity metabisulfite for specialized applications",
+      image: "/images/products/sodium-metabisulfite.jpg",
+      applications: ["Food preservation", "Wine making", "Water treatment"],
+      certifications: ["Food Grade", "Technical Grade"],
+    },
+  ];
+
   return (
     <ProductPage
       title="Commodities"
@@ -33,6 +94,7 @@ const Commodities = () => {
       image="/images/products/commodities.jpg"
       imageAlt="Global Commodities"
       features={features}
+      Products={products}
       badges={["Egypt Based", "Multi-Sector", "Quality Commodities"]}
       tags={["commodities", "trading", "agricultural"]}
       featuresTitle="Our Commodity Solutions"

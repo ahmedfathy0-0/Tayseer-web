@@ -1,5 +1,6 @@
 import ProductPage from "@/components/Product";
 import { Metadata } from "next";
+import { title } from "process";
 
 export const metadata: Metadata = {
   title: "Fertilizers | Tayseer",
@@ -26,16 +27,92 @@ const Fertilizers = () => {
     },
   ];
 
+  const Products = [
+    {
+      title: "Potassium Sulfate (Powder)",
+      description:
+        "High-quality potassium sulfate fertilizer for optimal crop nutrition and soil health.",
+      image: "/images/products/k2so4-powder.jpg",
+      certifications: ["Agricultural Grade", "Water Soluble"],
+      features: [
+        "Rich source of potassium and sulfur",
+        "Enhances crop yield and quality",
+        "Improves soil fertility",
+        "Low chloride content",
+      ],
+      applications: [
+        "Suitable for a wide range of crops including fruits, vegetables, and cereals",
+        "Ideal for use in both soil and foliar applications",
+        "Compatible with various irrigation systems",
+      ],
+    },
+    {
+      title: "Potassuim Sulphate (Granular)",
+      description:
+        "Premium granular potassium sulfate fertilizer for efficient nutrient delivery and improved crop performance.",
+      image: "/images/products/k2so4-granular.jpg",
+      certifications: ["Agricultural Grade", "Granular Form"],
+      features: [
+        "Granular form for easy application",
+        "Provides essential potassium and sulfur",
+        "Enhances plant growth and resilience",
+        "Low chloride content for sensitive crops",
+      ],
+      applications: [
+        "Ideal for a variety of crops including fruits, vegetables, and ornamentals",
+        "Suitable for direct soil application or incorporation into fertilizers blends",
+        "Effective in both conventional and precision agriculture practices",
+      ],
+    },
+    {
+      title: "Sulphur",
+      description:
+        "High-purity sulfur fertilizer for improved soil health and enhanced crop nutrition.",
+      image: "/images/products/sulphur.jpg",
+      certifications: ["Agricultural Grade", "Elemental Sulfur"],
+      features: [
+        "Essential nutrient for plant growth",
+        "Improves soil structure and fertility",
+        "Enhances nutrient uptake",
+        "Supports disease resistance in crops",
+      ],
+      applications: [
+        "Suitable for a wide range of crops including cereals, legumes, and oilseeds",
+        "Can be applied directly to soil or used in fertilizer blends",
+        "Effective in both acidic and alkaline soils",
+      ],
+    },
+    {
+      title: "Magnesium Sulphate (MgSO4) ",
+      description:
+        "Premium magnesium sulfate fertilizer for optimal plant nutrition and improved crop yields.",
+      image: "/images/products/mgso4.jpg",
+      certifications: ["Agricultural Grade", "Water Soluble"],
+      features: [
+        "Rich source of magnesium and sulfur",
+        "Enhances photosynthesis and chlorophyll production",
+        "Improves crop yield and quality",
+        "Water soluble for easy application",
+      ],
+      applications: [
+        "Ideal for a variety of crops including fruits, vegetables, and cereals",
+        "Suitable for soil and foliar applications",
+        "Compatible with various irrigation systems",
+      ],
+    },
+  ];  
+
   return (
     <ProductPage
       title="Fertilizers"
-      description="Nourish your crops for optimal growth with Tayseer International Chemicals – TSC premium range of fertilizers. Developed with quality and effectiveness in mind, our fertilizers provide essential nutrients to support healthy plant development and maximize agricultural productivity in Egypt and international markets. Browse our product offerings to discover how we can help you achieve superior results."
+      description="Tayseer International Chemicals offers a comprehensive range of high-quality fertilizers designed to enhance crop productivity and soil health. Our fertilizer solutions include balanced NPK formulations, organic alternatives, essential micronutrients, and innovative soil conditioners. Each product is carefully formulated to meet the specific nutritional needs of various crops while promoting sustainable agricultural practices. Trust TSC for reliable fertilizer solutions that deliver consistent results and support your agricultural success."
       image="/images/products/fertilizers.jpg"
-      imageAlt="Premium Fertilizers"
+      imageAlt="Fertilizers"
       features={features}
-      badges={["Premium Quality", "Essential Nutrients", "Superior Results"]}
-      tags={["fertilizers", "agriculture", "crops"]}
+      badges={["Agricultural Solutions", "Egypt Based", "Sustainable Farming"]}
+      tags={["fertilizers"]}
       featuresTitle="Our Fertilizer Solutions"
+      Products={Products}
     />
   );
 };

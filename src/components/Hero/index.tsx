@@ -1,5 +1,6 @@
 import HeroContent from "./components/HeroContent";
 import HeroImage from "./components/HeroImage";
+import RegionalCoverage from "../RegionalCoverage";
 
 const Hero = () => {
   return (
@@ -10,8 +11,8 @@ const Hero = () => {
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
-            <HeroContent />
-            <HeroImage />
+              <HeroContent />
+              <HeroImage />
           </div>
         </div>
       </section>
