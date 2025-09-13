@@ -86,7 +86,7 @@ const Fertilizers = () => {
       datasheets: ["/datasheets/sulphur.pdf"],
     },
     {
-      title: "Magnesium Sulphate (MgSO4) ",
+      title: "Magnesium Sulphate (MgSO₄) ",
       description:
         "Premium magnesium sulfate fertilizer for optimal plant nutrition and improved crop yields.",
       image: "/images/products/mgso4.jpg",

@@ -28,7 +28,7 @@ const Commodities = () => {
 
   const products = [
     {
-      title: "Aluminium Hydroxide (Al(OH)3)",
+      title: "Aluminium Hydroxide (Al(OH)₃)",
       description:
         "Versatile aluminium hydroxide for water treatment and industrial applications",
       image: "/images/products/al(oh)3.jpg",
@@ -41,7 +41,7 @@ const Commodities = () => {
       datasheets: ["/datasheets/TDS-Aluminum-Hydroxide.pdf"],
     },
     {
-      title: "Red Iron Oxide (Fe2O3)",
+      title: "Red Iron Oxide (Fe₂O₃)",
       description:
         "High-quality red iron oxide for pigments and various industrial uses",
       image: "/images/products/red-iron.jpg",
@@ -59,7 +59,7 @@ const Commodities = () => {
       datasheets: ["/datasheets/TDS-Yellow-Iron-Oxide.pdf"],
     },
     {
-      title: "Calcined Alumina (Al2O3)",
+      title: "Calcined Alumina (Al₂O₃)",
       description:
         "High-purity calcined alumina for advanced industrial applications",
       image: "/images/products/al2o3.jpg",
@@ -134,7 +134,7 @@ const Commodities = () => {
       datasheets: ["/datasheets/calcium-chloride.pdf"],
     },
     {
-      title: "Calcite (CaCO3) Powder",
+      title: "Calcite (CaCO₃) Powder",
       description:
         "High-quality calcite powder for industrial and agricultural applications",
       image: "/images/products/caco3-powder.jpg",
@@ -147,7 +147,7 @@ const Commodities = () => {
       datasheets: ["/datasheets/caco3-powder.pdf"],
     },
     {
-      title: "Calcite (CaCO3) Granules",
+      title: "Calcite (CaCO₃) Granules",
       description: "Durable calcite granules for various industrial uses",
       image: "/images/products/caco3-granules.jpg",
       applications: [
