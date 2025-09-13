@@ -1,7 +1,7 @@
 const ContactForm = () => {
   return (
     <div
-      className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-lg transition-all duration-300 hover:shadow-xl dark:bg-dark-800 dark:shadow-gray-700 dark:hover:shadow-primary-500/10 sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
+      className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-lg transition-all duration-300 hover:shadow-xl dark:bg-dark-800 dark:shadow-gray-700 dark:hover:shadow-primary-500/10 sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px] mt-10"
       data-wow-delay=".2s"
     >
       <h3 className="mb-8 text-2xl font-semibold text-forest-700 dark:text-primary-50 md:text-[28px] md:leading-[1.42]">

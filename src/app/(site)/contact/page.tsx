@@ -11,7 +11,6 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb pageName="Contact Page" />
-
       <Contact />
     </>
   );
