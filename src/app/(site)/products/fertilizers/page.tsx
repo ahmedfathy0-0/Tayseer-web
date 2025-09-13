@@ -45,7 +45,7 @@ const Fertilizers = () => {
         "Ideal for use in both soil and foliar applications",
         "Compatible with various irrigation systems",
       ],
-      datasheets: ["/datasheets/k2so4-powder.pdf"],
+      datasheets: ["/datasheets/TDS-Potassium-Sulphate-Powder.pdf"],
     },
     {
       title: "Potassuim Sulphate (Granular)",

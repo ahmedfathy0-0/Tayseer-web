@@ -9,7 +9,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
   return (
     <div className="wow fadeInUp group mb-10 h-full" data-wow-delay=".1s">
       <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg dark:border-gray-700 dark:bg-gray-800">
-        <div className="h-48 overflow-hidden rounded-t-lg">
+        <div className="h-60 overflow-hidden rounded-t-lg">
           <Link
             href={`/articles/${slug}`}
             aria-label="blog cover"

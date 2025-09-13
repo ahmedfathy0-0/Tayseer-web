@@ -28,26 +28,52 @@ const Commodities = () => {
 
   const products = [
     {
-      title: "Sulfuric Acid",
+      title: "Aluminium Hydroxide (Al(OH)3)",
       description:
-        "Technical and battery grade sulfuric acid for industrial applications",
-      image: "/images/products/sulfuric-acid.jpg",
+        "Versatile aluminium hydroxide for water treatment and industrial applications",
+      image: "/images/products/al(oh)3.jpg",
       applications: [
-        "Battery manufacturing",
-        "Metal processing",
-        "Chemical synthesis",
+        "Water purification",
+        "Flame retardants",
+        "Pharmaceuticals",
       ],
-      certifications: ["ISO Standards", "Industrial Grade"],
-      datasheets: ["/datasheets/sulfuric-acid.pdf"],
+      certifications: ["NSF", "Industrial Grade"],
+      datasheets: ["/datasheets/TDS-Aluminum-Hydroxide.pdf"],
     },
     {
-      title: "Hydrochloric Acid",
+      title: "Red Iron Oxide (Fe2O3)",
       description:
-        "High-purity hydrochloric acid for various industrial processes",
-      image: "/images/products/hydrochloric-acid.jpg",
-      applications: ["Metal pickling", "pH control", "Chemical processing"],
+        "High-quality red iron oxide for pigments and various industrial uses",
+      image: "/images/products/red-iron.jpg",
+      applications: ["Pigments", "Coatings", "Concrete coloring"],
+      certifications: ["Industrial Grade", "Natural Pigment"],
+      datasheets: ["/datasheets/TDS-Red-Iron-Oxide.pdf"],
+    },
+    {
+      title: "Iron Ore (Natural Yellow Iron Oxide)",
+      description:
+        "Natural yellow iron oxide for pigments and industrial applications",
+      image: "/images/products/iron-ore.jpg",
+      applications: ["Pigments", "Coatings", "Construction materials"],
+      certifications: ["Industrial Grade", "Natural Pigment"],
+      datasheets: ["/datasheets/TDS-Yellow-Iron-Oxide.pdf"],
+    },
+    {
+      title: "Calcined Alumina (Al2O3)",
+      description:
+        "High-purity calcined alumina for advanced industrial applications",
+      image: "/images/products/al2o3.jpg",
+      applications: [
+        "Abrasives",
+        "Refractories",
+        "Ceramics",
+        "Catalyst support",
+      ],
       certifications: ["Industrial Grade", "Technical Grade"],
-      datasheets: ["/datasheets/hydrochloric-acid.pdf"],
+      datasheets: [
+        "/datasheets/TDS-Fine-Alumina-5-micron.pdf",
+        "/datasheets/TDS-Calcined-Alumina.pdf",
+      ],
     },
     {
       title: "Caustic Soda",
@@ -133,40 +159,26 @@ const Commodities = () => {
       datasheets: ["/datasheets/caco3-granules.pdf"],
     },
     {
-      title: "Aluminium Hydroxide (Al(OH)3)",
+      title: "Sulfuric Acid",
       description:
-        "Versatile aluminium hydroxide for water treatment and industrial applications",
-      image: "/images/products/al(oh)3.jpg",
+        "Technical and battery grade sulfuric acid for industrial applications",
+      image: "/images/products/sulfuric-acid.jpg",
       applications: [
-        "Water purification",
-        "Flame retardants",
-        "Pharmaceuticals",
+        "Battery manufacturing",
+        "Metal processing",
+        "Chemical synthesis",
       ],
-      certifications: ["NSF", "Industrial Grade"],
-      datasheets: ["/datasheets/al(oh)3.pdf"],
+      certifications: ["ISO Standards", "Industrial Grade"],
+      datasheets: ["/datasheets/sulfuric-acid.pdf"],
     },
     {
-      title: "Calcined Alumina (Al2O3)",
+      title: "Hydrochloric Acid",
       description:
-        "High-purity calcined alumina for advanced industrial applications",
-      image: "/images/products/al2o3.jpg",
-      applications: [
-        "Abrasives",
-        "Refractories",
-        "Ceramics",
-        "Catalyst support",
-      ],
+        "High-purity hydrochloric acid for various industrial processes",
+      image: "/images/products/hydrochloric-acid.jpg",
+      applications: ["Metal pickling", "pH control", "Chemical processing"],
       certifications: ["Industrial Grade", "Technical Grade"],
-      datasheets: ["/datasheets/al2o3.pdf"],
-    },
-    {
-      title: "Iron Ore (Natural Yellow Iron Oxide)",
-      description:
-        "Natural yellow iron oxide for pigments and industrial applications",
-      image: "/images/products/iron-ore.jpg",
-      applications: ["Pigments", "Coatings", "Construction materials"],
-      certifications: ["Industrial Grade", "Natural Pigment"],
-      datasheets: ["/datasheets/iron-ore.pdf"],
+      datasheets: ["/datasheets/hydrochloric-acid.pdf"],
     },
   ];
 

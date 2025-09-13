@@ -62,7 +62,7 @@ const WaterTreatmentChemicals = () => {
         "Paper and pulp industry",
       ],
       datasheets: [
-        "/datasheets/TPP-100-PAC-18%-TDS.pdf",
+        "/datasheets/TDS-TPP-100-PAC-18%.pdf",
         "/datasheets/MSDS-TPP-100-PAC-18%.pdf",
       ],
     },
@@ -84,10 +84,50 @@ const WaterTreatmentChemicals = () => {
         "Phosphorus removal systems",
         "Sludge conditioning",
       ],
-      datasheets: ["/datasheets/FC-TDS.pdf","/datasheets/FC-MSDS.pdf"],
+      datasheets: ["/datasheets/TDS-FC.pdf", "/datasheets/MSDS-FC.pdf"],
     },
     {
-      title: "TSC-POLYACRYLAMIDE",
+      title: "TSC-CO-Polymer",
+      description:
+        "High-efficiency coagulant for enhanced water and wastewater treatment performance.",
+      image: "/images/products/co-polymer.jpg",
+      certifications: ["NSF"],
+      features: [
+        "Dual-function coagulant",
+        "Improved settling rates",
+        "Reduced chemical consumption",
+        "Versatile application range",
+      ],
+      applications: [
+        "Drinking water treatment",
+        "Wastewater clarification",
+        "Industrial water treatment",
+        "Cooling tower water treatment",
+      ],
+      datasheets: ["/datasheets/TDS-CO-Polymer.pdf"],
+    },
+    {
+      title: "Advanced PAC (ACH)",
+      description:
+        "Advanced coagulant for high-efficiency water and wastewater treatment.",
+      image: "/images/products/ach.jpg",
+      certifications: ["NSF", "KWA"],
+      features: [
+        "Pre-polymerized aluminum",
+        "Lower alkalinity consumption",
+        "Improved coagulation kinetics",
+        "Reduced chemical dosing",
+      ],
+      applications: [
+        "High-quality water production",
+        "Industrial process water",
+        "Cooling water treatment",
+        "Advanced wastewater treatment",
+      ],
+      datasheets: ["/datasheets/PDS-TSC-Advanced-ACH.pdf"],
+    },
+    {
+      title: "TSC-POLYACRYLAMIDE-TW-8120",
       description:
         "Versatile flocculants designed to enhance solid-liquid separation in various water treatment processes.",
       image: "/images/products/polymer-flocculants.jpg",
@@ -104,7 +144,7 @@ const WaterTreatmentChemicals = () => {
         "Mining applications",
         "Oil and gas treatment",
       ],
-      datasheets: ["/datasheets/polymer-flocculants.pdf"],
+      datasheets: ["/datasheets/TDS-polyacrylamide-TW-8120.pdf"],
     },
     {
       title: "Aluminum Sulfate (Alum)",
@@ -125,26 +165,6 @@ const WaterTreatmentChemicals = () => {
         "Textile industry treatment",
       ],
       datasheets: ["/datasheets/aluminum-sulfate.pdf"],
-    },
-    {
-      title: "Advanced PAC (ACH)",
-      description:
-        "Advanced coagulant for high-efficiency water and wastewater treatment.",
-      image: "/images/products/ach.jpg",
-      certifications: ["NSF", "KWA"],
-      features: [
-        "Pre-polymerized aluminum",
-        "Lower alkalinity consumption",
-        "Improved coagulation kinetics",
-        "Reduced chemical dosing",
-      ],
-      applications: [
-        "High-quality water production",
-        "Industrial process water",
-        "Cooling water treatment",
-        "Advanced wastewater treatment",
-      ],
-      datasheets: ["/datasheets/ach.pdf"],
     },
     {
       title: "Activated Carbon",
