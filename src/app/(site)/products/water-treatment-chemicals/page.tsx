@@ -44,7 +44,7 @@ const WaterTreatmentChemicals = () => {
 
   const Products = [
     {
-      title: "Polyaluminum Chloride (PAC)",
+      title: "Polyaluminum Chloride (TPP-100 PAC 18%)",
       description:
         "High-performance coagulant for effective water and wastewater treatment applications.",
       image: "/images/products/pac.jpg",
@@ -63,7 +63,26 @@ const WaterTreatmentChemicals = () => {
       ],
     },
     {
-      title: "Polymer Flocculants",
+      title: "Ferric Chloride (TSC-FC 40%)",
+      description:
+        "Robust coagulant for industrial and municipal water treatment applications.",
+      image: "/images/products/ferric-chloride.jpg",
+      certifications: ["Ministry of Health - Egypt"],
+      features: [
+        "Effective at low temperatures",
+        "Wide pH operating range",
+        "Strong coagulation power",
+        "Phosphorus removal capability",
+      ],
+      applications: [
+        "Municipal wastewater treatment",
+        "Industrial effluent treatment",
+        "Phosphorus removal systems",
+        "Sludge conditioning",
+      ],
+    },
+    {
+      title: "TSC-POLYACRYLAMIDE",
       description:
         "Versatile flocculants designed to enhance solid-liquid separation in various water treatment processes.",
       image: "/images/products/polymer-flocculants.jpg",
@@ -101,7 +120,7 @@ const WaterTreatmentChemicals = () => {
       ],
     },
     {
-      title: "Aluminum Chlorohydrate (ACH)",
+      title: "Advanced PAC (ACH)",
       description:
         "Advanced coagulant for high-efficiency water and wastewater treatment.",
       image: "/images/products/ach.jpg",
@@ -117,25 +136,6 @@ const WaterTreatmentChemicals = () => {
         "Industrial process water",
         "Cooling water treatment",
         "Advanced wastewater treatment",
-      ],
-    },
-    {
-      title: "Ferric Chloride",
-      description:
-        "Robust coagulant for industrial and municipal water treatment applications.",
-      image: "/images/products/ferric-chloride.jpg",
-      certifications: ["Ministry of Health - Egypt"],
-      features: [
-        "Effective at low temperatures",
-        "Wide pH operating range",
-        "Strong coagulation power",
-        "Phosphorus removal capability",
-      ],
-      applications: [
-        "Municipal wastewater treatment",
-        "Industrial effluent treatment",
-        "Phosphorus removal systems",
-        "Sludge conditioning",
       ],
     },
     {

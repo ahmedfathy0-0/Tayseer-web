@@ -85,6 +85,74 @@ const Commodities = () => {
       applications: ["Food preservation", "Wine making", "Water treatment"],
       certifications: ["Food Grade", "Technical Grade"],
     },
+    {
+      title: "Calcium Chloride",
+      description:
+        "Versatile calcium chloride for de-icing, dust control, and industrial uses",
+      image: "/images/products/calcium-chloride.jpg",
+      applications: [
+        "De-icing roads",
+        "Dust suppression",
+        "Concrete acceleration",
+      ],
+      certifications: ["Industrial Grade", "Food Grade"],
+    },
+    {
+      title: "Calcite (CaCO3) Powder",
+      description:
+        "High-quality calcite powder for industrial and agricultural applications",
+      image: "/images/products/caco3-powder.jpg",
+      applications: [
+        "Construction materials",
+        "Soil conditioning",
+        "Plastic filler",
+      ],
+      certifications: ["Industrial Grade", "Agricultural Grade"],
+    },
+    {
+      title: "Calcite (CaCO3) Granules",
+      description: "Durable calcite granules for various industrial uses",
+      image: "/images/products/caco3-granules.jpg",
+      applications: [
+        "Water treatment",
+        "Construction aggregates",
+        "Soil amendment",
+      ],
+      certifications: ["Industrial Grade", "Agricultural Grade"],
+    },
+    {
+      title: "Aluminium Hydroxide (Al(OH)3)",
+      description:
+        "Versatile aluminium hydroxide for water treatment and industrial applications",
+      image: "/images/products/al(oh)3.jpg",
+      applications: [
+        "Water purification",
+        "Flame retardants",
+        "Pharmaceuticals",
+      ],
+      certifications: ["NSF", "Industrial Grade"],
+    },
+    {
+      title: "Calcined Alumina (Al2O3)",
+      description:
+        "High-purity calcined alumina for advanced industrial applications",
+      image: "/images/products/al2o3.jpg",
+      applications: [
+        "Abrasives",
+        "Refractories",
+        "Ceramics",
+        "Catalyst support",
+      ],
+      certifications: ["Industrial Grade", "Technical Grade"],
+    },
+    {
+      title: "Iron Ore (Natural Yellow Iron Oxide)",
+      description:
+        "Natural yellow iron oxide for pigments and industrial applications",
+      image: "/images/products/iron-ore.jpg",
+      applications: ["Pigments", "Coatings", "Construction materials"],
+      certifications: ["Industrial Grade", "Natural Pigment"],
+    },
   ];
 
   return (

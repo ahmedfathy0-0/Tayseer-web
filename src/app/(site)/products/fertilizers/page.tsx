@@ -100,6 +100,24 @@ const Fertilizers = () => {
         "Compatible with various irrigation systems",
       ],
     },
+    {
+      title: "Sulphur bentonite 90",
+      description:
+        "High-quality sulfur bentonite fertilizer for enhanced soil health and effective nutrient delivery.",
+      image: "/images/products/sulphur-bentonite-90.jpg",
+      certifications: ["Agricultural Grade", "Slow Release"],
+      features: [
+        "Combines sulfur with bentonite clay for improved soil structure",
+        "Provides a slow-release source of sulfur",
+        "Enhances nutrient availability and uptake",
+        "Supports healthy microbial activity in soil",
+      ],
+      applications: [
+        "Suitable for a wide range of crops including fruits, vegetables, and ornamentals",
+        "Can be applied directly to soil or used in fertilizer blends",
+        "Effective in both acidic and alkaline soils",
+      ],
+    },
   ];  
 
   return (
