@@ -137,7 +137,7 @@ const ProductCard = ({
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 mt-auto justify-center">
           <Link
-            href={`/datasheet/${slug}`}
+            href={`/datasheet/${productSlug}`}
             className="flex items-center justify-center px-4 py-2 border border-primary hover:bg-primary/10 hover:border-primary/80
                 text-background-dark-secondary dark:text-white text-[12px] font-medium rounded-lg transition-colors duration-200"
           >
@@ -158,8 +158,12 @@ const ProductCard = ({
             Download Data Sheet
           </Link>
           <Link
-            href="https://wa.me/message/YWOKGTSVIH4LJ1"
-            className="flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary/90 text-white text-[12px]  font-medium rounded-lg transition-colors duration-200"
+            href={`/contact?product=${encodeURIComponent(
+              title
+            )}&category=${encodeURIComponent(
+              applications.length > 0 ? applications[0] : "General"
+            )}&description=${encodeURIComponent(description)}`}
+            className="flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary/90 text-white text-[12px] font-medium rounded-lg transition-colors duration-200"
           >
             <svg
               className="w-4 h-4 mr-2"

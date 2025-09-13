@@ -10,10 +10,10 @@ const Contact = () => {
       <div className="container px-4">
         {/* Contact Information and Form */}
         <div className="-mx-4 flex flex-wrap items-center">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
+          <div className="w-full px-4 lg:w-5/12 xl:w-6/12">
             <ContactInfo />
           </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
+          <div className="w-full px-4 lg:w-7/12 xl:w-6/12">
             <ContactForm />
           </div>
         </div>
