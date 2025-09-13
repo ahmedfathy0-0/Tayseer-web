@@ -34,17 +34,33 @@ const ContactForm = () => {
         productLower.includes("sulfate") ||
         productLower.includes("potassium") ||
         productLower.includes("magnesium") ||
-        categoryLower.includes("agriculture")
+        categoryLower.includes("agriculture") ||
+        productLower.includes("sulphur") ||
+        productLower.includes("sulfur")
       ) {
         productCategory = "fertilizers-agriculture";
       } else if (
         productLower.includes("acid") ||
         productLower.includes("caustic") ||
         productLower.includes("citric") ||
-        productLower.includes("sodium")
+        productLower.includes("sodium") ||
+        productLower.includes("chloride") ||
+        productLower.includes("hydroxide") ||
+        categoryLower.includes("industrial") ||
+        categoryLower.includes("chemical")
       ) {
         productCategory = "industrial-chemicals-acids";
+      } else if (categoryLower.includes("commodities")) {
+        productCategory = "industrial-chemicals-acids"; // Map commodities to industrial chemicals
       }
+
+      console.log("Auto-fill debug:", {
+        product,
+        category,
+        productLower,
+        categoryLower,
+        detectedProductCategory: productCategory,
+      });
 
       // Auto-fill industry based on category/product
       let industry = "";
@@ -87,6 +103,12 @@ const ContactForm = () => {
         industry,
         message: preFilledMessage,
       }));
+
+      console.log("Form data updated:", {
+        productCategory,
+        industry,
+        message: preFilledMessage.substring(0, 50) + "...",
+      });
     }
   }, [searchParams]);
 
