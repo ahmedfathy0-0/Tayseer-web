@@ -11,7 +11,6 @@ const Logo = ({ sticky }: LogoProps) => {
   const shouldUseDarkText = pathUrl !== "/" || sticky;
   const isHomePage = pathUrl === "/";
 
-  // Use consistent padding logic: py-2 for sticky/non-home, py-5 for non-sticky home
   const shouldUseCompactPadding = !isHomePage || sticky;
 
   return (
@@ -27,27 +26,27 @@ const Logo = ({ sticky }: LogoProps) => {
           alt="logo"
           width={isHomePage && !sticky ? 70 : 90}
           height={50}
-          className="header-logo dark:hidden max-[420px]:w-16 max-[420px]:h-16"
+          className="header-logo dark:hidden max-[420px]:w-17 max-[420px]:h-16"
         />
         <Image
           src="/images/logo/logo.png"
           alt="logo"
           width={isHomePage && !sticky ? 70 : 90}
           height={50}
-          className="header-logo hidden dark:block max-[420px]:w-16 max-[420px]:h-16"
+          className="header-logo hidden dark:block max-[420px]:w-17 max-[420px]:h-16"
         />
 
         <div className="ml-3 flex flex-col">
-            <h1
+          <h1
             className={`font-bold text-lg leading-tight ${
               shouldUseDarkText
-              ? "text-forest-700 dark:text-primary-50"
-              : "text-white"
+                ? "text-forest-700 dark:text-primary-50"
+                : "text-white"
             } text-[16px]  max-[460px]:text-[11px] max-[700px]:text-[14px]
             `}
-            >
+          >
             Tayseer International Chemicals
-            </h1>
+          </h1>
           <span
             className={`text-sm font-medium tracking-wider ${
               shouldUseDarkText
