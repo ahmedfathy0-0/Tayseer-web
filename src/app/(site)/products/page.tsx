@@ -84,7 +84,7 @@ export default function ProductsPage() {
             {productCategories.map((category, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl dark:bg-gray-800"
+                className="group relative flex flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl dark:bg-gray-800"
               >
                 {/* Image Section */}
                 <div className="relative h-64 overflow-hidden">
@@ -108,13 +108,13 @@ export default function ProductsPage() {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <p className="mb-6 text-sm text-body-color dark:text-body-color-dark">
                     {category.description}
                   </p>
 
                   {/* Features List */}
-                  <div className="mb-6">
+                  <div className="mb-6 flex-1">
                     <h4 className="mb-3 text-sm font-semibold text-dark dark:text-white">
                       Key Products:
                     </h4>
@@ -141,26 +141,28 @@ export default function ProductsPage() {
                     </ul>
                   </div>
 
-                  {/* CTA Button */}
-                  <Link
-                    href={category.href}
-                    className="block w-full rounded-lg bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary/90"
-                  >
-                    Explore Products
-                    <svg
-                      className="ml-2 inline-block h-4 w-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  {/* CTA Button - Always at bottom */}
+                  <div className="mt-auto">
+                    <Link
+                      href={category.href}
+                      className="block w-full rounded-lg bg-primary px-6 py-3 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-primary/90"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </Link>
+                      Explore Products
+                      <svg
+                        className="ml-2 inline-block h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
