@@ -1,5 +1,5 @@
 import ContactInfo from "./components/ContactInfo";
-import ContactForm from "./components/ContactForm";
+import ContactFormWrapper from "./components/ContactFormWrapper";
 import LocationsMap from "./components/LocationsMap";
 
 const Contact = () => {
@@ -14,7 +14,7 @@ const Contact = () => {
             <ContactInfo />
           </div>
           <div className="w-full px-4 lg:w-7/12 xl:w-6/12">
-            <ContactForm />
+            <ContactFormWrapper />
           </div>
         </div>
 
