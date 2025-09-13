@@ -20,6 +20,7 @@ interface ProductData {
   features?: string[];
   applications?: string[];
   slug?: string;
+  datasheets?: string[];
 }
 
 interface ProductPageProps {
@@ -43,7 +44,7 @@ const ProductPage = ({
   badges,
   tags,
   featuresTitle,
-  Products = []
+  Products = [],
 }: ProductPageProps) => {
   const relatedArticles = getPostsByTags(tags, [
     "title",
@@ -121,7 +122,7 @@ const ProductPage = ({
               </div>
             </div>
           )}
-          
+
           {/* Products Section */}
           {Products && Products.length > 0 && (
             <section className="py-16 md:py-20 lg:py-28">
@@ -147,6 +148,7 @@ const ProductPage = ({
                       features={product.features}
                       applications={product.applications}
                       slug={product.slug}
+                      datasheets={product.datasheets}
                     />
                   ))}
                 </div>

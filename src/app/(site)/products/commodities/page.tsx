@@ -38,6 +38,7 @@ const Commodities = () => {
         "Chemical synthesis",
       ],
       certifications: ["ISO Standards", "Industrial Grade"],
+      datasheets: ["/datasheets/sulfuric-acid.pdf"],
     },
     {
       title: "Hydrochloric Acid",
@@ -46,6 +47,7 @@ const Commodities = () => {
       image: "/images/products/hydrochloric-acid.jpg",
       applications: ["Metal pickling", "pH control", "Chemical processing"],
       certifications: ["Industrial Grade", "Technical Grade"],
+      datasheets: ["/datasheets/hydrochloric-acid.pdf"],
     },
     {
       title: "Caustic Soda",
@@ -57,6 +59,7 @@ const Commodities = () => {
         "Chemical production",
       ],
       certifications: ["Industrial Grade", "Food Grade"],
+      datasheets: ["/datasheets/caustic-soda.pdf"],
     },
     {
       title: "Citric Acid",
@@ -65,6 +68,10 @@ const Commodities = () => {
       applications: ["Food & beverage", "Cleaning products", "Pharmaceutical"],
       certifications: ["Food Grade", "USP", "BP"],
       slug: "citric-acid",
+      datasheets: [
+        "/datasheets/citric-acid.pdf",
+        "/datasheets/citric-acid-2.pdf",
+      ],
     },
     {
       title: "Sodium Bisulfite",
@@ -77,6 +84,7 @@ const Commodities = () => {
         "Textile processing",
       ],
       certifications: ["Food Grade", "Technical Grade"],
+      datasheets: ["/datasheets/sodium-bisulfite.pdf"],
     },
     {
       title: "Sodium Metabisulfite",
@@ -84,6 +92,7 @@ const Commodities = () => {
       image: "/images/products/sodium-metabisulfite.jpg",
       applications: ["Food preservation", "Wine making", "Water treatment"],
       certifications: ["Food Grade", "Technical Grade"],
+      datasheets: ["/datasheets/sodium-metabisulfite.pdf"],
     },
     {
       title: "Calcium Chloride",
@@ -96,6 +105,7 @@ const Commodities = () => {
         "Concrete acceleration",
       ],
       certifications: ["Industrial Grade", "Food Grade"],
+      datasheets: ["/datasheets/calcium-chloride.pdf"],
     },
     {
       title: "Calcite (CaCO3) Powder",
@@ -108,6 +118,7 @@ const Commodities = () => {
         "Plastic filler",
       ],
       certifications: ["Industrial Grade", "Agricultural Grade"],
+      datasheets: ["/datasheets/caco3-powder.pdf"],
     },
     {
       title: "Calcite (CaCO3) Granules",
@@ -119,6 +130,7 @@ const Commodities = () => {
         "Soil amendment",
       ],
       certifications: ["Industrial Grade", "Agricultural Grade"],
+      datasheets: ["/datasheets/caco3-granules.pdf"],
     },
     {
       title: "Aluminium Hydroxide (Al(OH)3)",
@@ -131,6 +143,7 @@ const Commodities = () => {
         "Pharmaceuticals",
       ],
       certifications: ["NSF", "Industrial Grade"],
+      datasheets: ["/datasheets/al(oh)3.pdf"],
     },
     {
       title: "Calcined Alumina (Al2O3)",
@@ -144,6 +157,7 @@ const Commodities = () => {
         "Catalyst support",
       ],
       certifications: ["Industrial Grade", "Technical Grade"],
+      datasheets: ["/datasheets/al2o3.pdf"],
     },
     {
       title: "Iron Ore (Natural Yellow Iron Oxide)",
@@ -152,6 +166,7 @@ const Commodities = () => {
       image: "/images/products/iron-ore.jpg",
       applications: ["Pigments", "Coatings", "Construction materials"],
       certifications: ["Industrial Grade", "Natural Pigment"],
+      datasheets: ["/datasheets/iron-ore.pdf"],
     },
   ];
 

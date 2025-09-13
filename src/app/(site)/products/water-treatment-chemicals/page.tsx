@@ -61,6 +61,10 @@ const WaterTreatmentChemicals = () => {
         "Swimming pool water treatment",
         "Paper and pulp industry",
       ],
+      datasheets: [
+        "/datasheets/TPP-100-PAC-18%-TDS.pdf",
+        "/datasheets/MSDS-TPP-100-PAC-18%.pdf",
+      ],
     },
     {
       title: "Ferric Chloride (TSC-FC 40%)",
@@ -80,6 +84,7 @@ const WaterTreatmentChemicals = () => {
         "Phosphorus removal systems",
         "Sludge conditioning",
       ],
+      datasheets: ["/datasheets/FC-TDS.pdf","/datasheets/FC-MSDS.pdf"],
     },
     {
       title: "TSC-POLYACRYLAMIDE",
@@ -99,6 +104,7 @@ const WaterTreatmentChemicals = () => {
         "Mining applications",
         "Oil and gas treatment",
       ],
+      datasheets: ["/datasheets/polymer-flocculants.pdf"],
     },
     {
       title: "Aluminum Sulfate (Alum)",
@@ -118,6 +124,7 @@ const WaterTreatmentChemicals = () => {
         "Paper manufacturing",
         "Textile industry treatment",
       ],
+      datasheets: ["/datasheets/aluminum-sulfate.pdf"],
     },
     {
       title: "Advanced PAC (ACH)",
@@ -137,6 +144,7 @@ const WaterTreatmentChemicals = () => {
         "Cooling water treatment",
         "Advanced wastewater treatment",
       ],
+      datasheets: ["/datasheets/ach.pdf"],
     },
     {
       title: "Activated Carbon",
@@ -155,6 +163,10 @@ const WaterTreatmentChemicals = () => {
         "Odor and taste removal",
         "Industrial water treatment",
         "Air purification systems",
+      ],
+      datasheets: [
+        "/datasheets/activated-carbon.pdf",
+        "/datasheets/activated-carbon-2.pdf",
       ],
     },
   ];

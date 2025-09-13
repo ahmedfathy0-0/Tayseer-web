@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,6 +11,7 @@ interface ProductCardProps {
   applications?: string[];
   features?: string[];
   slug?: string;
+  datasheets?: string[];
 }
 
 const ProductCard = ({
@@ -18,15 +21,53 @@ const ProductCard = ({
   certifications = [],
   applications = [],
   features = [],
-  slug,
+  datasheets,
 }: ProductCardProps) => {
-  // Generate slug from title if not provided
-  const productSlug =
-    slug ||
-    title
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/(^-|-$)/g, "");
+  // Generate datasheet paths based on image name
+  const getDatasheetPaths = () => {
+    if (datasheets && datasheets.length > 0) {
+      return datasheets;
+    }
+
+    // Extract image name without extension from image path
+    const imageName = image
+      .split("/")
+      .pop()
+      ?.replace(/\.[^/.]+$/, "");
+    if (!imageName) return [];
+
+    // Return both potential datasheet paths
+    return [`/datasheets/${imageName}.pdf`, `/datasheets/${imageName}-2.pdf`];
+  };
+
+  // Handle multiple datasheet downloads
+  const handleDatasheetDownload = async () => {
+    const datasheetPaths = getDatasheetPaths();
+
+    for (const path of datasheetPaths) {
+      try {
+        // Properly encode the URL for the fetch request
+        const encodedPath = encodeURI(path);
+
+        // Check if file exists before attempting download
+        const response = await fetch(encodedPath, { method: "HEAD" });
+        if (response.ok) {
+          // Create download link with properly encoded href
+          const link = document.createElement("a");
+          link.href = encodedPath;
+          link.download = path.split("/").pop() || "datasheet.pdf";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          // Add small delay between downloads
+          await new Promise((resolve) => setTimeout(resolve, 500));
+        }
+      } catch (error) {
+        console.log(`Datasheet not found: ${path}`, error);
+      }
+    }
+  };
 
   return (
     <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800">
@@ -136,8 +177,8 @@ const ProductCard = ({
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 mt-auto justify-center">
-          <Link
-            href={`/datasheet/${productSlug}`}
+          <button
+            onClick={handleDatasheetDownload}
             className="flex items-center justify-center px-4 py-2 border border-primary hover:bg-primary/10 hover:border-primary/80
                 text-background-dark-secondary dark:text-white text-[12px] font-medium rounded-lg transition-colors duration-200"
           >
@@ -156,7 +197,7 @@ const ProductCard = ({
               />
             </svg>
             Download Data Sheet
-          </Link>
+          </button>
           <Link
             href={`/contact?product=${encodeURIComponent(
               title
@@ -173,10 +214,10 @@ const ProductCard = ({
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293c-.63.63-.184 1.707.707 1.707H19M7 13v4a2 2 0 002 2h4a2 2 0 002-2v-4m-6 4h.01M15 17h.01"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293c-.63.63-.184 1.707.707 1.707H19M7 13v4a2 2 0 002 2h4a2 2 0 002-2v-4m-6 4h.01M15 17h.01"
               />
             </svg>
             Order Now

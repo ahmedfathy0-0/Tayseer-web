@@ -45,6 +45,7 @@ const Fertilizers = () => {
         "Ideal for use in both soil and foliar applications",
         "Compatible with various irrigation systems",
       ],
+      datasheets: ["/datasheets/k2so4-powder.pdf"],
     },
     {
       title: "Potassuim Sulphate (Granular)",
@@ -63,6 +64,7 @@ const Fertilizers = () => {
         "Suitable for direct soil application or incorporation into fertilizers blends",
         "Effective in both conventional and precision agriculture practices",
       ],
+      datasheets: ["/datasheets/k2so4-granular.pdf"],
     },
     {
       title: "Sulphur",
@@ -81,6 +83,7 @@ const Fertilizers = () => {
         "Can be applied directly to soil or used in fertilizer blends",
         "Effective in both acidic and alkaline soils",
       ],
+      datasheets: ["/datasheets/sulphur.pdf"],
     },
     {
       title: "Magnesium Sulphate (MgSO4) ",
@@ -99,6 +102,7 @@ const Fertilizers = () => {
         "Suitable for soil and foliar applications",
         "Compatible with various irrigation systems",
       ],
+      datasheets: ["/datasheets/mgso4.pdf", "/datasheets/mgso4-2.pdf"],
     },
     {
       title: "Sulphur bentonite 90",
@@ -117,8 +121,9 @@ const Fertilizers = () => {
         "Can be applied directly to soil or used in fertilizer blends",
         "Effective in both acidic and alkaline soils",
       ],
+      datasheets: ["/datasheets/TDS-SB.pdf"],
     },
-  ];  
+  ];
 
   return (
     <ProductPage
