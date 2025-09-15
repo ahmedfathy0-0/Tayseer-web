@@ -46,20 +46,25 @@ const WaterTreatmentChemicals = () => {
     {
       title: "Polyaluminum Chloride (TPP-100 PAC 18%)",
       description:
-        "High-performance coagulant for effective water and wastewater treatment applications.",
+        "High-performance coagulant for effective drinking water and wastewater treatment applications.",
       image: "/images/products/pac.jpg",
       certifications: ["NSF", "KWA", "Ministry of Health - Egypt"],
       features: [
+        "Low residual aluminium",
+        "High recovery",
+        "Low dose",
+        "Low energy required",
+        "High water quality",
         "Superior coagulation efficiency",
         "Wide pH range effectiveness",
         "Reduced sludge production",
         "Cost-effective treatment solution",
       ],
       applications: [
-        "Municipal water treatment",
-        "Industrial wastewater treatment",
+        "Drinking water production",
+        "Pre- treatment of RO",
         "Swimming pool water treatment",
-        "Paper and pulp industry",
+        "Waste water treatment",
       ],
       datasheets: [
         "/datasheets/TDS-TPP-100-PAC-18%.pdf",
@@ -99,7 +104,6 @@ const WaterTreatmentChemicals = () => {
         "Versatile application range",
       ],
       applications: [
-        "Drinking water treatment",
         "Wastewater clarification",
         "Industrial water treatment",
         "Cooling tower water treatment",
@@ -121,27 +125,96 @@ const WaterTreatmentChemicals = () => {
       applications: [
         "High-quality water production",
         "Industrial process water",
-        "Cooling water treatment",
+        "High turbidity water treatment",
+        "Direct filtration systems",
         "Advanced wastewater treatment",
       ],
       datasheets: ["/datasheets/PDS-TSC-Advanced-ACH.pdf"],
     },
     {
-      title: "TSC-POLYACRYLAMIDE-TW-8120",
+      title: "TSC-Ploy-Ferric-Chloride (PFC)",
       description:
-        "Versatile flocculants designed to enhance solid-liquid separation in various water treatment processes.",
-      image: "/images/products/polymer-flocculants.jpg",
+        "High-performance flocculant for efficient solid-liquid separation in water treatment processes.",
+      image: "/images/products/cationic-flocculants.jpg",
       certifications: ["NSF"],
       features: [
-        "High molecular weight polymers",
+        "Effective at low temperatures",
+        "Wide pH operating range",
+        "Strong coagulation power",
+        "Phosphorus removal capability",
+        "Reduced chemical dosing",
+      ],
+      applications: [
+        "Municipal wastewater treatment",
+        "Industrial effluent treatment",
+        "Phosphorus removal systems",
+        "COD reduction",
+        "Sludge conditioning",
+      ],
+      datasheets: ["/datasheets/TDS-cationic-polymer-TSC-PFC.pdf"],
+    },
+    {
+      title: "TSC- PACS",
+      description:
+        "Specialized coagulant for targeted water treatment applications, delivering efficient turbidity removal and improved water quality.",
+      image: "/images/products/pacs.jpg",
+      certifications: ["NSF", "KWA"],
+      features: [
+        "Tailored coagulation solution",
+        "Effective turbidity removal",
+        "Optimized for specific water types",
+        "Cost-effective treatment option",
+      ],
+      applications: [
+        "Drinking water treatment",
+        "Industrial water treatment",
+        "Wastewater treatment",
+        "Cooling tower water treatment",
+      ],
+      datasheets: ["/datasheets/TDS-PACS.pdf"],
+    },
+    {
+      title: "TSC-CPAM-630",
+      description:
+        "High-performance anionic polyacrylamide for effective sludge dewatering and water treatment applications.",
+      image: "/images/products/pam-630.jpg",
+      certifications: ["NSF"],
+      features: [
+        "Medium-High molecular weight polymer",
+        "Medium-High charge density",
         "Excellent bridging properties",
         "Fast settling characteristics",
-        "Various ionic charges available",
+        "Reduced chemical dosing",
       ],
       applications: [
         "Sludge dewatering",
         "Clarification processes",
         "Mining applications",
+        "Paper manufacturing",
+        "Wastewater treatment",
+        "Oil and gas treatment",
+      ],
+      datasheets: ["/datasheets/TDS-anionic-polymer-TSC-PAM-630.pdf"],
+    },
+    {
+      title: "TSC-APAM (TW-8120)",
+      description:
+        "Versatile flocculants designed to enhance solid-liquid separation in various water treatment processes.",
+      image: "/images/products/polymer-flocculants.jpg",
+      certifications: ["NSF"],
+      features: [
+        "Medium-High molecular weight polymers",
+        "Medium-High charge density",
+        "Excellent bridging properties",
+        "Fast settling characteristics",
+        "Reduced chemical dosing",
+      ],
+      applications: [
+        "Sludge dewatering",
+        "Clarification processes",
+        "Mining applications",
+        "Paper manufacturing",
+        "wastewater treatment",
         "Oil and gas treatment",
       ],
       datasheets: ["/datasheets/TDS-polyacrylamide-TW-8120.pdf"],
@@ -194,7 +267,7 @@ const WaterTreatmentChemicals = () => {
   return (
     <ProductPage
       title="Water Treatment Chemicals"
-      description="Tayseer International Chemicals – TSC is a major water treatment chemicals manufacturer and supplier in Egypt. We specialize in producing and supplying a wide range of water treatment chemicals, including superior coagulants and flocculants for water and wastewater treatment. Our premium chemicals are designed to deliver outstanding results, helping you achieve high water quality standards both locally in Egypt and internationally. Discover our water treatment chemicals products portfolio and benefit from our commitment to quality."
+      description="Tayseer International Chemicals – TSC is a pioneer for major water treatment chemicals manufacturer and supplier in Egypt. We specialize in producing and supplying a wide range of water treatment chemicals, including superior coagulants and flocculants for water and wastewater treatment. Our premium chemicals are designed to deliver outstanding results, helping you achieve high water quality standards both locally in Egypt and internationally. Discover our water treatment chemicals products portfolio and benefit from our commitment to quality. we provide reliable solutions for municipal and industrial water treatment applications, technical support, exceptional customer service, and after-sales support."
       image="/images/products/water-treatment.jpg"
       imageAlt="Water Treatment Chemicals"
       features={features}

@@ -103,7 +103,7 @@ const ProductCard = ({
                 Key Features:
               </h4>
               <ul className="space-y-1">
-                {features.slice(0, 3).map((feature, index) => (
+                {features.map((feature, index) => (
                   <li
                     key={index}
                     className="flex items-start text-xs text-body-color dark:text-body-color-dark"
@@ -133,7 +133,7 @@ const ProductCard = ({
                 Applications:
               </h4>
               <ul className="space-y-1">
-                {applications.slice(0, 3).map((application, index) => (
+                {applications.map((application, index) => (
                   <li
                     key={index}
                     className="flex items-start text-xs text-body-color dark:text-body-color-dark"
